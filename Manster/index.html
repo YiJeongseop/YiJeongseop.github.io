@@ -35,7 +35,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "2371956387";
+    var serviceWorkerVersion = "1323363890";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
@@ -54,6 +54,10 @@
           });
         }
       });
+    });
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      return false;
     });
   </script>
 </body>
